@@ -1,27 +1,16 @@
 
 function solucao(notas) {
-    let maior = 100
-    let soma=0;
-    let sub=0;
-    let media =0;
-    let menor;
-    let tamanho;
-    menor = Math.min.apply(Math, notas)
-	for(let i =0; i<notas.length; i++){
-        
-        if(notas[i]>maior){
-            maior = i
-           
-        }
-        soma +=notas[i]
-        sub = soma-maior-menor
-        tamanho=notas.length-2
-        media = sub/tamanho;
-}
-   
-    console.log( media)
     
-   
+    notas.sort((a,b)=>a-b);// Ordena os elementos do array em ordem Crescente
+    notas.pop(); // remove o ultimo
+    notas.shift(); // remove o primeiro
+    let soma =0;
+    let media =0;
+    for(let x=0; x<notas.length; x++){
+        soma+=notas[x];
+        media = soma/notas.length
+    }
+    console.log(media)
    
 }
 
