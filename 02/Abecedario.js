@@ -7,6 +7,6 @@ function solucao(letra, palavras) {
            quantidadePerdedores++
            }
     }
-    console.log(quantidadePerdedores)
+    console.log(quantidadePerdedores);
 }
 
